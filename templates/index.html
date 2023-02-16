@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+    <form method="POST">
+        <label>Choose a currency</label>
+        <select id="from-currency" name="from-currency">
+          <option value="USD">USD</option>
+          <option value="TRY">TRY</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <label>Choose a change currency to exchange to</label>
+        <select id="to-currency" name="to-currency">
+          <option value="USD">USD</option>
+          <option value="TRY">TRY</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <input type="number" name="amount" value="0" min="0">
+        <input type="submit" name="submit-button" id="submit-button">
+    </form>
+    {% if result %}
+        <p>Your result is: {{result}}</p>
+    {% endif %}
+</body>
+</html>
